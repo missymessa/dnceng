@@ -3,13 +3,14 @@
   "name": "Deployment Annotations (Infinity)",
   "type": "yesoreyeram-infinity-datasource",
   "access": "proxy",
+  "basicAuth": true,
+  "basicAuthUser": "ignored",
   "url": "https://dotneteng-status-staging.azurewebsites.net",
   "jsonData": {
-    "tlsSkipVerify": false,
-    "httpHeaderName1": "Authorization"
+    "tlsSkipVerify": false
   },
   "secureJsonData": {
-    "httpHeaderValue1": "[vault(dotneteng-status-auth-header)]"
+    "basicAuthPassword": "[vault(dotnet-build-bot-dotnet-eng-status-token)]"
   },
   "isDefault": false,
   "readOnly": false
